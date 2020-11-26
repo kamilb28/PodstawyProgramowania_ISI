@@ -70,7 +70,8 @@ void RUCH_GRACZA(int PLANSZA[8][8]){
 
     printf("Gdzie mam wykonać ruch?: ");
     scanf("%c-%d", &RuchDO.a, &RuchDO.i);
-    RuchDO.i = 8-RuchDO.i;               //odejmujemy bo plansza ma na górze "8" a tablica 0
+    RuchDO.i = 8-RuchDO.i;    //odejmujemy bo plansza ma na górze "8" a tablica 0
+    printf("[%a][%d]", RuchDO.a, RuchDO.i);
     if (!(RuchDO.a >= 'A' && RuchDO.a <= 'H') || !(RuchDO.i >= 0 && RuchDO.i <=7)){
         printf("miejsce poza planszą\n");
         RUCH_GRACZA(PLANSZA);
