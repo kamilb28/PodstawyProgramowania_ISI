@@ -49,13 +49,43 @@ char BIERKA(int liczba_bierki)
     }
 }
 
+typedef struct Pole_na_planszy { char a; int i; };
+
 void RUCH_GRACZA(int PLANSZA[8][8]){
+    struct Pole_na_planszy RuchZ;
+    struct Pole_na_planszy RuchDO;
 
     printf("Wybierz bierkę (np. A-2): ");
-    scanf("%c-%d",)
+    scanf("%c-%d", &RuchZ.a, &RuchZ.i);
+    RuchZ.i = 8-RuchZ.i;                //odejmujemy bo plansza ma na górze "8" a tablica 0
+    if (!(RuchZ.a >= 'A' && RuchZ.a <= 'H') || !(RuchZ.i >= 0 && RuchZ.i <=7)){
+        printf("źle wybrana bierka\n");
+        RUCH_GRACZA(PLANSZA);
+    }
+    int RuchZZ = RuchZ.a - 'A';          // zamiana liter na liczby tablicy
+    if (PLANSZA[RuchZ.i][RuchZZ] >= 0){
+        printf("źle wybrana bierka (wybierz TWOJĄ bierkę)\n");
+        RUCH_GRACZA(PLANSZA);
+    }
+
+    printf("Gdzie mam wykonać ruch?: ");
+    scanf("%c-%d", &RuchDO.a, &RuchDO.i);
+    RuchDO.i = 8-RuchDO.i;               //odejmujemy bo plansza ma na górze "8" a tablica 0
+    if (!(RuchDO.a >= 'A' && RuchDO.a <= 'H') || !(RuchDO.i >= 0 && RuchDO.i <=7)){
+        printf("miejsce poza planszą\n");
+        RUCH_GRACZA(PLANSZA);
+    }
+    int RuchDD = RuchDO.a - 'A';        // zamiana liter na liczby tablicy
+    if (PLANSZA[RuchDO.i][RuchDD] < 0){
+        printf("nie możesz zbić wsłasnych figur i pionków\n");
+        RUCH_GRACZA(PLANSZA);
+    }
+    PLANSZA[RuchDO.i][RuchDD]=PLANSZA[RuchZ.i][RuchZZ];    // idziemy na wskazanie miejsce
+    PLANSZA[RuchZ.i][RuchZZ]=0;                           // pozaostawiamy puste miejsce skad sie ruszylismy
 }
 
 void RUCH_PRZECIWNIKA(int PLANSZA[8][8]){
+    printf("tu bedzie ruch przeciwnika");
 
 }
 
