@@ -49,6 +49,16 @@ char BIERKA(int liczba_bierki)
     }
 }
 
+void RUCH_GRACZA(int PLANSZA[8][8]){
+
+    printf("Wybierz bierkę (np. A-2): ");
+    scanf("%c-%d",)
+}
+
+void RUCH_PRZECIWNIKA(int PLANSZA[8][8]){
+
+}
+
 int main()
 {
     int PLANSZA[8][8]={{2, 3, 4, 6, 5, 4, 3, 2},
@@ -63,11 +73,12 @@ int main()
     WYPISZ_PLANSZE(PLANSZA);
 
     int bool = 1;
-    while (1){
+    while (bool){
         RUCH_GRACZA(PLANSZA);
         WYPISZ_PLANSZE(PLANSZA);
         RUCH_PRZECIWNIKA(PLANSZA);
         WYPISZ_PLANSZE(PLANSZA);
+        return 0;
     }
 /*
 {B_Wieża, B_Skoczek, B_Goniec, B_Król, B_Hetman, B_Goniec, B_Skoczek, B_Wieża},
