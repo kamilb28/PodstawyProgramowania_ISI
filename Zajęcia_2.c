@@ -115,6 +115,90 @@ void zadanie_15b(){
     scanf("%lf",&a);
     printf ("%.lf", a);
 }
+void zadanie_HELLOWORLD(){
+    printf("Witam wszystkich\n");
+
+    return 0;
+}
+void zadanie_1(){
+    int x;
+
+    scanf("%d", &x);
+    printf("%d\n", x);
+    printf("%d\n", ++x);
+    printf("%d\n", x);
+    printf("%d\n", x++);
+    printf("%d\n", x);
+    return 0;
+}
+void zadanie2(){
+    unsigned int i=0;
+    printf("%u\n", i-1);
+
+    return 0;
+}
+void zadanie3(){
+    printf("%d\n", i);
+
+    int i = 1;
+
+    printf("%d\n", i);
+    {
+        int i = 2;
+        printf ("%d\n",i);
+    }
+    printf("%d\n", i);
+    return 0;
+}
+void zadanie4(){
+    int h,m,s;
+    printf("Godzina (HH:MM:SS): ");
+    scanf("%d:%d:%d", &h, &m, &s);
+
+    s += m*60 + h*3600;
+    printf("to: %d sekund", s);
+    return 0;
+}
+void zadanie5(){
+    float liczba_zmiennoprzecinkowa;
+    int liczba_całkowita;
+    scanf("%f", &liczba_zmiennoprzecinkowa);
+    liczba_całkowita = liczba_zmiennoprzecinkowa;
+    printf("%f", liczba_zmiennoprzecinkowa-liczba_całkowita);
+    return 0;
+}
+void zadanie6(){
+char imie[50];
+char nazwisko[50];
+
+scanf("%s", &imie);
+scanf("%s", &nazwisko);
+
+printf("Nazwisko: %s\nImie: %s\n", nazwisko, imie);
+
+return 0;
+}
+void zadanie23(){
+    printf("int size: %d\n",sizeof(int));
+    printf("double size: %d\n",sizeof(double));
+    printf("long size: %d\n",sizeof(long));
+    printf("char size: %d\n",sizeof(char));
+    printf("float size: %d\n",sizeof(float));
+    printf("short size: %d\n",sizeof(short));
+}
+void zadanie25(){
+    int h,m,s;
+    printf("Godzina(HH:MM:SS): ");
+    scanf("%d:%d:%d",&h,&m,&s);
+    printf("ma %d sekund", h*3600+m*60+s);
+
+}
+void zadanie24(){
+    int a,b,c;
+    scanf("%d %d %d",&a,&b,&c);
+    printf("Delta: %d\n", b*b-4*a*c );
+    return 0;
+}
 int main(){
     zadanie_6();
     zadanie_18a();
@@ -129,5 +213,15 @@ int main(){
     zadanie_3();
     zadanie_15();
     zadanie_15b();
+    zadanie_HELLOWORLD();
+    zadanie_1();
+    zadanie2();
+    zadanie3();
+    zadanie4();
+    zadanie5();
+    zadanie6();
+    zadanie23();
+    zadanie25();
+    zadanie24();
     return 0;
 
