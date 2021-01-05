@@ -5,5 +5,6 @@ void zadanie_1(){
 }
 
 int main{
-        zadanie_1();
+    zadanie_1();
 }
+

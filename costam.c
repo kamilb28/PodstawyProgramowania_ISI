@@ -10,5 +10,6 @@ int main(){
     }
     fprintf(plik, "%s", cytat);
     fclose(plik)
+
     return 0;
 }
