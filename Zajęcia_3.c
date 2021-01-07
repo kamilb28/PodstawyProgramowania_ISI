@@ -225,7 +225,37 @@ void zadanie_21(){
     else printf("zła liczba\n");
 }
 void zadanie_22(){
+    int tab1[3] = {1,2,3};
+    int tab2[3] = {4,5,6};
+    int tab[6];
+    for(int i = 0; i < sizeof(tab)/4; i++){
+        if (i<3) tab[i] = tab1[i];
+        else tab[i] = tab2[i-3];
+        printf("[%d]", tab[i]);
+    }
+}
+void zadanie_23(){
+    float invest,profit;
+    int months;
+    char plus_minus = ' ';
 
+    printf("Wprowadź koszt inwestycji: "); scanf("%f",&invest);
+    printf("Wprowadź całkoite przychody z inwestycji: "); scanf("%f",&profit);
+    printf("Ilość miesięcy: "); scanf("%d",&months);
+
+    if(profit > invest) plus_minus = '+';
+
+    printf("Ogólnie: %c%.2f%%\n", plus_minus, (profit*100)/invest - 100);
+    printf("Miesięcznie: %c%.2f%%\n", plus_minus, ((profit*100)/invest - 100)/months);
+}
+void zadanie_24(){
+    char word[100];
+    int licznik;
+    printf("Insert Word: "); scanf("%s", word);
+    for(licznik=0; licznik < sizeof(word); licznik++){
+        if(word[licznik] == '\0') break;
+    }
+    printf("Number of characters: %d\n", licznik);
 }
 int main(){
     //zadanie_3();
@@ -242,6 +272,8 @@ int main(){
     //zadanie_19();
     //zadanie_20();
     //zadanie_21();
-    zadanie_22();
+    //zadanie_22();
+    //zadanie_23();
+    //zadanie_24();
 }
 
