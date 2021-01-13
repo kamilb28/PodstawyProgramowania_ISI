@@ -22,7 +22,7 @@ void zadanie_3(){
     printf("Czy liczba jest w tablicy: (podaj liczbę 0-9) "); scanf("%d",&liczba);
     printf("%d\n",if_exist(liczba,tablica));
 }
-zadanie_4(){
+void zadanie_4(){
     char litera;
     char słowo[4][20]= {{'a','n','a','n','a','s'},
                         {'b','a','n','a','n'},
@@ -331,7 +331,7 @@ void zadanie_31(){
     printf("Im(z2)="); scanf("%d",&Im_z2);
     printf("Z=%d+%di\n",Re_z1+Re_z2,Im_z1+Im_z2);
 }
-int main(){
+int main() {
     //zadanie_1();
     //zadanie_2();
     //zadanie_3();
@@ -358,3 +358,4 @@ int main(){
     //zadanie_29();
     //zadanie_30();
     //zadanie_31();
+}
