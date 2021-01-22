@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/kamilbernacik/CLionProjects/SNAKE/main.c
+stdio.h
+-
+stdlib.h
+-
+unistd.h
+-
+termios.h
+-
+fcntl.h
+-
+stdbool.h
+-
+time.h
+-
+
